@@ -1774,3 +1774,4 @@ La gestión de errores en la manipulación de archivos en C implica verificar el
 - Verificar el valor de retorno de `fseek` y `ftell`.
 
 Estas prácticas ayudan a asegurar que tu programa maneje correctamente los errores y se comporte de manera predecible frente a problemas de E/S de archivos.
+--
