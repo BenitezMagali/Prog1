@@ -52,7 +52,8 @@ Aunque los tres tipos mencionados anteriormente son los más relevantes en el co
 - **ROM**: Memoria de solo lectura, usada en sistemas embebidos.
 - **Virtual**: Técnica de administración de memoria, gestionada por el sistema operativo.
 
-----------
+
+-----------
 
 El término "overflow" se refiere a una situación en la que un programa intenta usar más memoria de la que está disponible en un área específica de la memoria. Hay dos tipos principales de overflow relacionados con la memoria: **stack overflow** y **heap overflow**. Veamos cada uno de ellos y cómo se relacionan con la memoria de pila (stack) y la memoria dinámica (heap).
 
@@ -137,7 +138,9 @@ En este ejemplo, `strcpy` copia una cadena que excede el tamaño del bloque de m
 - **Heap Overflow**: Ocurre cuando se usa más memoria dinámica de la disponible o se escribe más datos en un bloque de memoria asignado dinámicamente de lo que puede contener.
 
 Ambos tipos de overflow pueden causar que un programa se bloquee o se comporte de manera impredecible, y es crucial gestionarlos adecuadamente para escribir código robusto y eficiente.
-------
+
+-----------
+
 La librería `stdlib.h` es una de las bibliotecas estándar de C y contiene una colección de funciones de propósito general que son esenciales para la programación en C. Estas funciones incluyen gestión de memoria dinámica, control de procesos, conversión de tipos y otras utilidades. A continuación, se describen algunas de las funciones más importantes que se encuentran en `stdlib.h`:
 
 ### Gestión de Memoria Dinámica
@@ -380,7 +383,8 @@ La librería `stdlib.h` es fundamental en C y proporciona una amplia gama de fun
 - **Ordenación y Búsqueda**: `qsort`, `bsearch`.
 
 Estas funciones son esenciales para la programación en C y permiten realizar tareas comunes de manera eficiente y segura.
----
+
+-----------
 
 La desreferenciación y el casteo (o conversión de tipos) son conceptos diferentes en C, aunque ambos pueden estar relacionados con el uso de punteros y la función `malloc`.
 
@@ -468,6 +472,7 @@ En este ejemplo:
 - **Relación con `malloc`**: `malloc` devuelve un puntero de tipo `void*`, que a menudo debe ser casteado al tipo de puntero adecuado. Luego, puedes desreferenciar ese puntero para acceder a la memoria asignada.
 
 -----------
+
 Pedir memoria dinámica usando `malloc` dentro de un lazo (bucle) puede ser una mala práctica en programación por varias razones. Aquí te explico detalladamente por qué y cuáles podrían ser las consecuencias:
 
 ### Razones y Consecuencias
@@ -579,7 +584,9 @@ En este ejemplo, `malloc` es llamado en cada iteración del lazo, lo que puede l
 - **Complejidad del Código**: Hace que el código sea más propenso a errores y más difícil de mantener.
 
 Es mejor asignar la memoria necesaria fuera del lazo o asegurarse de liberar la memoria antes de volver a asignarla. Esto mejora la eficiencia y la legibilidad del código, y reduce el riesgo de errores.
----------
+
+-----------
+
 ### La aritmética de punteros
 
 La aritmética de punteros es una característica poderosa del lenguaje C que permite realizar operaciones matemáticas con punteros. Estas operaciones incluyen sumar o restar un valor entero a un puntero y restar dos punteros. La aritmética de punteros es útil para navegar a través de arrays y estructuras de datos en memoria.
@@ -689,7 +696,9 @@ En este ejemplo, `*(ptr + i)` desreferencia el puntero `ptr` después de moverlo
 - **Desreferenciación**: Accede al valor almacenado en la dirección de memoria a la que apunta un puntero, y puede combinarse con la aritmética de punteros para acceder a diferentes elementos de un array.
 
 La aritmética de punteros es una herramienta poderosa, pero debe usarse con cuidado para evitar errores como desbordamientos de memoria y accesos inválidos.
------
+
+-----------
+
 ## Estructuras de datos
 En C, puedes implementar diversas estructuras de datos para almacenar y gestionar datos de manera eficiente. Algunas de las estructuras de datos más comunes incluyen arrays, listas enlazadas, pilas, colas, árboles y tablas hash. En esta respuesta, nos centraremos en listas enlazadas, pilas y colas, proporcionando ejemplos básicos de cada una.
 
@@ -886,7 +895,9 @@ int main() {
 - **Colas**: Estructura FIFO donde los elementos se agregan en la parte trasera y se eliminan desde la parte delantera.
 
 Estas estructuras de datos son fundamentales y ampliamente utilizadas en programación debido a su flexibilidad y eficiencia en la gestión de datos.
-----
+
+-----------
+
 ### Diferencia punteros char e int
 En C, los punteros son variables que almacenan direcciones de memoria. La diferencia entre un puntero a cadena (puntero a `char`) y un puntero a `int` radica en el tipo de datos al que apuntan y cómo se utilizan en el contexto del programa. Vamos a explorar estas diferencias más a fondo.
 
@@ -995,7 +1006,9 @@ En este ejemplo:
   - Aritmética de punteros se realiza en incrementos del tamaño de `int` (generalmente 4 bytes).
 
 Ambos tipos de punteros son fundamentales en C y permiten acceder y manipular datos en memoria de manera eficiente.
-----
+
+-----------
+
 ### Caracter *
 En el lenguaje de programación C, el carácter `*` tiene varios usos distintos y esenciales. Aquí se describen los principales:
 
@@ -1112,7 +1125,9 @@ El carácter `*` en C tiene varios usos importantes:
 - **Punteros a Funciones**: Declara y desreferencia punteros a funciones.
 
 Estos usos hacen del carácter `*` una parte fundamental del lenguaje C, especialmente en la gestión de memoria y la manipulación de datos.
----
+
+-----------
+
 En C, una cadena segura se refiere a una cadena de caracteres gestionada de manera que se eviten errores comunes y vulnerabilidades de seguridad, como desbordamientos de búfer y accesos fuera de los límites. Aquí hay algunas prácticas y consideraciones para trabajar con cadenas de manera segura en C:
 
 ### 1. Uso de Funciones Seguras
@@ -1257,7 +1272,9 @@ Una cadena segura en C es una cadena que se gestiona de manera que se eviten err
 - **Uso de `strdup`**: Manejar correctamente la memoria asignada al duplicar cadenas.
 
 Siguiendo estas prácticas, puedes minimizar el riesgo de errores y vulnerabilidades al trabajar con cadenas en C.
----
+
+-----------
+
 En C, los argumentos se pueden pasar a las funciones de dos maneras principales: **por valor** y **por referencia**. A continuación, se explica cada una de estas formas y se proporcionan ejemplos para ilustrar cómo funcionan.
 
 ### 1. Paso por Valor
@@ -1429,7 +1446,9 @@ Punto después de llamar a la función: (2, 3)
 - **Paso de Estructuras**: Las estructuras pueden pasarse por valor o por referencia. Pasarlas por referencia es generalmente más eficiente y permite modificar la estructura original.
 
 Estas técnicas permiten una gran flexibilidad en la forma en que se pueden manipular los datos dentro de las funciones en C.
----
+
+-----------
+
 Tienes razón en que el alcance de una variable en C se refiere al bloque de código en el que la variable está definida y donde es accesible. Sin embargo, el alcance de una variable puede clasificarse de manera más detallada en varios tipos dependiendo de dónde y cómo se declare la variable. Aquí te explico los diferentes tipos de alcance de una variable en C:
 
 ### 1. Alcance de Bloque (Local)
@@ -1549,7 +1568,9 @@ int main() {
 - **Alcance de Parámetro**: Parámetros de una función. Solo accesibles dentro del cuerpo de la función.
 
 Estas diferentes clasificaciones de alcance permiten un control preciso sobre la visibilidad y la vida útil de las variables en un programa en C.
----
+
+-----------
+
 En el contexto de la función `main` en C, el parámetro `argv` es un array de cadenas de caracteres (punteros a `char`) que contiene los argumentos pasados al programa desde la línea de comandos. La convención es que `argv[0]` contiene el nombre del programa que se está ejecutando. Este nombre puede ser una ruta completa, una ruta relativa, o simplemente el nombre del ejecutable, dependiendo de cómo se haya invocado el programa.
 
 ### Ejemplo de Uso de `argv[0]`
@@ -1607,7 +1628,9 @@ Argumento 3: arg3
 ### Resumen
 
 `argv[0]` en la función `main` de un programa en C contiene el nombre del programa que se está ejecutando. Este nombre puede ser una ruta completa, una ruta relativa, o simplemente el nombre del ejecutable, dependiendo de cómo se haya invocado el programa. Es útil para mostrar mensajes de ayuda o para depuración, pero no debe ser utilizado para decisiones críticas de seguridad debido a su naturaleza manipulable.
----
+
+-----------
+
 La gestión de errores es una parte crucial de la manipulación de archivos en C. Al trabajar con archivos, es importante verificar el éxito de las operaciones y manejar adecuadamente los errores para evitar comportamientos inesperados o fallos en el programa. A continuación, se describen algunas técnicas comunes para gestionar errores al manipular archivos en C.
 
 ### Funciones Comunes para la Manipulación de Archivos
@@ -1774,4 +1797,5 @@ La gestión de errores en la manipulación de archivos en C implica verificar el
 - Verificar el valor de retorno de `fseek` y `ftell`.
 
 Estas prácticas ayudan a asegurar que tu programa maneje correctamente los errores y se comporte de manera predecible frente a problemas de E/S de archivos.
---
+
+-----------
